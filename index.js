@@ -1,0 +1,14 @@
+const express = require('express');
+
+const app = express();
+
+
+app.get('/', (req, res)=>{
+ res.send('This is the first response');
+});
+
+const port = process.env.port || 3000;
+
+app.listen(port, ()=>{
+ console.log('Port is running');
+});
